@@ -1,0 +1,14 @@
+# Build ứng dụng
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+./gradlew clean build
+
+# Run ứng dụng
+./gradlew bootRun
+
+# Stop ứng dụng (Ctrl+C)
+
+# Kiểm tra health
+curl http://localhost:8080/actuator/health
+
+# Test API
+curl http://localhost:8080/api/movies

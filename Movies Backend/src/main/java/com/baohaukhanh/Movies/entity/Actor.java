@@ -1,0 +1,23 @@
+package com.baohaukhanh.Movies.entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.neo4j.core.schema.GeneratedValue;
+import org.springframework.data.neo4j.core.schema.Node;
+import org.springframework.data.neo4j.core.schema.Property;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Node("Actor")
+public class Actor {
+    
+    @Id
+    @GeneratedValue
+    private Long id;
+    
+    @Property("name")
+    private String name;
+}
